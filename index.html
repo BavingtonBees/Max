@@ -305,7 +305,6 @@
             <h2>Contact</h2>
             <form 
               action="https://submit-form.com/I8k6ubkcd" method="POST" 
-              data-botpoison-public-key="pk_0a343a6b-c8eb-4032-b820-26cf08059b96"
             >
                 <label for="name" class="required">Name</label>
                 <input type="text" id="name" name="name" placeholder="Name" required>
@@ -317,9 +316,12 @@
                 <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required>
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Optional Message"></textarea>
-                <p class="red-asterisk">Required</p>
+                
+                <input type="hidden" name="_error" value="https://bavingtonbees.com/error" />
                 <input type="hidden" name="_redirect" value="https://bavingtonbees.com/success" />
+                <input type="hidden" name="_append" value="false" />
               
+                <p class="red-asterisk">Required</p>
                 <button type="submit">Contact Max</button>
             </form>
           </section>
@@ -329,6 +331,5 @@
         <p>Bavington Bees</p>
         <p>&copy; 2024 Bavington Bees. All rights reserved.</p>
 </footer>
-    <script src="https://unpkg.com/@botpoison/browser" async></script>
 </body>
 </html>
