@@ -315,13 +315,9 @@
                 <label for="callback" class="required">Contact preference</label>
                 <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required>
                 <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Optional Message"></textarea>
-                
-                <input type="hidden" name="_error" value="https://bavingtonbees.com/error" />
-                <input type="hidden" name="_redirect" value="https://bavingtonbees.com/success" />
-                <input type="hidden" name="_append" value="false" />
-              
+                <textarea id="message" name="message" placeholder="Optional Message"></textarea>              
                 <p class="red-asterisk">Required</p>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW" data-callback="javascriptCallback" aria-label="Captcha Verification"></div>                
                 <button type="submit">Contact Max</button>
             </form>
           </section>
@@ -331,5 +327,6 @@
         <p>Bavington Bees</p>
         <p>&copy; 2024 Bavington Bees. All rights reserved.</p>
 </footer>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </body>
 </html>
