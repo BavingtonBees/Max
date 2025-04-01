@@ -232,6 +232,12 @@
         color: red;
     }
 
+    .cf-turnstile {
+        max-width: 100%; 
+        overflow: hidden;
+        display: block;
+    }
+
 
     @media (max-width: 900px) {
 
