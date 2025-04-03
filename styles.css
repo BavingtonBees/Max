@@ -198,13 +198,21 @@
 
 
     footer {
+        display: flex;
+        flex-direction: column;
         background-color: #FFD760;
+        align-items: center; /* Center items horizontally */
+        gap: 20px;
+    }
+    
+    footer .item-footer {
+        width: 80vw;
         color: black;
         text-align: center;
         padding: 10px;
         width: 100%; /* Ensures it stays within the viewport */
-
     }
+
     input[type="text"], input[type="email"], input[type="tel"], textarea {
         width: 95%;
         padding: 10px;
