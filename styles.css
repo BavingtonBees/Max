@@ -1,4 +1,4 @@
-/*Framework v1.01 bBees 2025-04-03 */
+/*Framework v1.02 bBees 2025-07-02 */
     /* montserrat-regular - latin */
     @font-face {
       font-display: swap;
@@ -76,6 +76,8 @@
         background-color: #FFFF00;
     }        
 
+/* Hero */
+
     .hero-container {
         display: flex;
         flex-direction: column;
@@ -108,6 +110,10 @@
         left: 0;
     }
 
+/* End hero */
+
+/* Intro */
+
     .intro-container {
         display: flex;
         flex-direction: column;
@@ -139,7 +145,10 @@
         display: none;
     }
 
-/* Multi column */   
+/* End Intro */
+
+/* Multi column */
+
     .feature-container {
       display: flex;
       flex-direction: row;
@@ -166,9 +175,10 @@
         height: auto;
     }
 
-/*end Multi column */
+/* End multi column */
 
-/*Single contact Column */
+/* Single column contact */
+
     .container-contact {
         display: flex;
         flex-direction: column;
@@ -183,33 +193,6 @@
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         box-sizing: border-box; /* Ensure padding is included in width */
-    }
-
-/*End Single contact column*/
-
-
-    h2, h3, h4, h5 {
-        text-align: center;
-    }
-
-    .larger-text {
-      font-size: 1.2em; /* Adjust the size as needed */
-    }
-
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        background-color: #FFD760;
-        align-items: center; /* Center items horizontally */
-        gap: 20px;
-    }
-    
-    footer .item-footer {
-        width: 80vw;
-        color: black;
-        text-align: center;
-        padding: 10px;
     }
 
     input[type="text"], input[type="email"], input[type="tel"], textarea {
@@ -240,11 +223,30 @@
     }
 
     .cf-turnstile {
-        max-width: 100%; 
         overflow: hidden;
         display: block;
     }
 
+/* End single column contact */
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFD760;
+        align-items: center; /* Center items horizontally */
+        gap: 20px;
+    }
+    
+    footer .item-footer {
+        width: 80vw;
+        color: black;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+
+/* Media queries */
 
     @media (max-width: 900px) {
 
@@ -297,4 +299,18 @@
             padding:20px;
         }
 
+        .cf-turnstile {
+            width: 200px; 
+        }
+
     }  
+
+/* Emd media */
+
+    h2, h3, h4, h5 {
+        text-align: center;
+    }
+
+    .larger-text {
+      font-size: 1.2em; /* Adjust the size as needed */
+    }
