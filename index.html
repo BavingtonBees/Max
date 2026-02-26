@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Framework v1.01 2025-03-29-->
-<!--Content v1.01 2025-03-31 self hosted fonts and webp images hero eager loading rest lazy. features and contact centered in mobile separate css-->
-<!--Content v1.02 2025-09-07 Link to shop added, Contact message now required-->
-
-
+<!--aharc using css v3.0 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Award-winning honey by Bavington Bees. Contact us for honey and bee-related products.">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="styles.css">
     <title>Bavington Bees</title>
+    <meta name="description" content="Award-winning honey by Bavington Bees. Contact us for honey and bee-related products.">
 </head>
 
 
 <body>
     <header>
-        <img class="logo" src="logo.webp" alt="Logo" width="200" height="100">
-        <img class="mobile-strapline"src="strapline.webp" alt="Award Winning Honey" width="216" height="30">
+        <img src="logo.webp" alt="Logo" width="200" height="100">
+        <img class="mobile-strapline"src="strapline.webp" alt="Award Winning Honey" width="308" height="40">
         <img class="strapline" src="strapline.webp" alt="Award Winning Honey" width="308" height="40">
         <a href="https://www.instagram.com/bavington.bees/" target="_blank" aria-label="Visit our Instagram">
-            <img class="instagram-icon"src="instagram-icon.svg" alt="Instagram icon">
+            <img class="instagram-icon"src="instagram-icon.svg" width="50" height="50" alt="Instagram icon">
         </a>
     </header>
 
@@ -40,18 +40,12 @@
     </section>
 
     <section class="intro-container" id="home">
-        <section class="intro-text">
-            <div  class="intro-title">
-              <h2>Bavington Bees has five beehives in Brockham in the heart of the Surrey Hills.</h2> 
-          </div>
+        <section class="intro-item">
+
+            <h2>Bavington Bees has five beehives in Brockham in the heart of the Surrey Hills.</h2>
             <p class="larger-text">Our honeybees produce delicious natural light honey which has won several awards.</p>
             <p>We harvest the honey in the autumn and sell through <a href="https://theshopatstroodgreen.co.uk/" target="_blank">The Shop at Strood Green</a> in Brockham and directly to consumers.</p>
             <p>Want to know more? Get in <a href="#contact">touch</a>, browse our <a href="https://shop.bavingtonbees.com/" target="_blank">online shop</a>, or follow us on <a href="https://www.instagram.com/bavington.bees/" target="_blank">Instagram</a> .</p>
-        </section>
-        <section class="intro-icon-container">        
-            <a href="https://www.instagram.com/bavington.bees/" target="_blank" aria-label="Visit our Instagram">
-                <img class="intro-icon"src="instagram-icon.svg" alt="Instagram icon">
-            </a>                
         </section>
     </section>
 
@@ -97,15 +91,31 @@
                 <button type="submit">Contact Max</button>
             </form>
           </section>
-        <br />
-        <a href="#home">To Top</a>
     </div>
+
+
+    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+  </main>
+
     <footer>
+      <div id="footer-placeholder">
         <div class="item-footer">
-            <p><strong>Award Winning Honey</strong></p>      
-            <p>&copy; 2024 Bavington Bees. All rights reserved.</p>
-        </div>    
-</footer>
+          <p><strong>Award Winning Honey</strong></p>
+          <p>&copy; 2024 Bavington Bees Ref: ns</p>
+          <p>©
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      fetch('../../footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    </script>
+
 
 <script 
     src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer>
