@@ -22,9 +22,10 @@
     --text-nav:black;
     --text-nav-hover:grey;
 
-    --bg-button: #FFD760;;
+    --bg-button: #FFD760;
+    --bg-button-hover: #E6C04F;
     --text-button: black;
-    --text-button-hover: white;
+    --text-button-hover: black;
     --button-radius: 25px;
 
     --link-color: blue;
