@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--aharc using css v3.0 -->
+<!--bbees using css v3.0 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,28 +16,28 @@
 <body>
 <header class="site-header">
     <div class="header-left">
-        <img src="logo.webp" alt="Logo" width="200" height="100">
+        <img src="assets/images/logo.webp" alt="Bavington Bees logo" width="200" height="100">
     </div>
 
     <div class="header-center">
-        <img src="strapline.webp" alt="Award Winning Honey" width="250">
+        <img src="assets/images/strapline.webp" alt="Award Winning Honey" width="250">
     </div>
 
     <div class="header-right">
-        <a href="https://www.instagram.com/bavington.bees/" target="_blank" aria-label="Visit our Instagram">
-            <img src="instagram-icon.svg" alt="Instagram icon" width="50" height="50">
+        <a href="https://www.instagram.com/bavington.bees/" target="_blank" aria-label="Visit Bavington Bees on Instagram">
+            <img src="assets/images/instagram-icon.svg" alt="Instagram icon" width="50" height="50">
         </a>
     </div>
 </header>
 
     <nav>
         <a href="#home" aria-current="page">Home</a>
-        <a href="#contact">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
 
     <section class="hero-container">
         <section class="hero-image">
-            <img src="hero.webp" 
+            <img src="assets/images/hero.webp"
                  alt="Honey Bees"
                  loading="eager"
                  fetchpriority="high"
@@ -45,7 +45,7 @@
         </section>
     </section>
 
-    <section class="intro-container" id="home">
+    <section class="intro-container" id="top">
         <section class="intro-item">
 
             <h3>Bavington Bees has five beehives in Brockham in the heart of the Surrey Hills.</h3>
@@ -55,72 +55,51 @@
         </section>
     </section>
 
-    <div class="feature-container">
-        <article class="feature-item">
-            <img src="2025-03-01h-honey-jars.webp" alt="Honey Jars" loading="lazy">
+<section class="card-grid" style="--columns:3;">
+    <article class="card card--image-only">
+        <img src="assets/images/2025-03-01h-honey-jars.webp" alt="Honey Jars" loading="lazy">
+    </article>
+
+     <article class="card card--image-only">
+        <img src="assets/images/2024-10-01h-award.webp" alt="Awards" loading="lazy">
+    </article>
+
+     <article class="card card--image-only">
+        <img src="assets/images/2025-03-01h-checking-hives.webp" alt="Max checking the hives" loading="lazy">
+    </article>
+
+</section>
+
+    <section class="cta-container">
+        <article  class="cta-item">
+            <p>You can contact Max using our <a href="contact.html">contact form</a>.</p>
         </article>
-
-        <article class="feature-item"> 
-            <img src="2024-10-01h-award.webp" alt="Awards" loading="lazy">
-
-        </article>
-
-        <article class="feature-item">
-            <img src="2025-03-01h-checking-hives.webp" alt="Max checking the hives" loading="lazy">
-        </article>
-    </div>
-
-    <div class="container-contact">
-        <section id="contact" class="item-contact">
-            <h2>Contact</h2>
-            <form 
-              action="https://submit-form.com/I8k6ubkcd" method="POST" 
-            >
-                <label for="name" class="required">Name</label>
-                <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
-
-                <label for="email" class="required">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
-
-                <label for="phone" class="required">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="Telephone number" required aria-required="true">
-
-                <label for="callback" class="required">Contact preference</label>
-                <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required aria-required="true">
-
-                <label for="message"class="required">Message</label>
-                <textarea id="message" name="message" placeholder="How can I help you?" required aria-required="true"></textarea>
-                
-                <p class="red-asterisk">Required</p>
-
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW" data-callback="javascriptCallback" aria-label="Captcha Verification"></div>                
-                <button type="submit">Contact Max</button>
-            </form>
-          </section>
-    </div>
-
+    </section>
 
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-  </main>
+</main>
 
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p><strong>Award Winning Honey</strong></p>
-          <p>&copy; 2024 Bavington Bees Ref: ns</p>
-        </div>
-      </div>
-    </footer>
+<footer>
+  <div id="footer-placeholder">
+    <div class="item-footer">
+      <p><strong>Award Winning Honey</strong></p>
+      <p>&copy; 2024 Bavington Bees Ref: ns</p>
+    </div>
+  </div>
+</footer>
 
-    <script>
-      fetch('bbees-footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+<script>
+  fetch('bbees-footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
+    })
+    .catch(error => console.error('Error loading footer:', error));
+</script>
 
+<script data-goatcounter="https://bavingtonbees.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js">
+</script>
 
 <script 
     src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer>

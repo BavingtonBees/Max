@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--bbees using css v3.0 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Bavington Bees</title>
+    <meta name="description" content="Award-winning honey by Bavington Bees. Contact us for honey and bee-related products.">
+</head>
+
+
+<body>
+<header>
+    <section class="site-header">
+        <div class="header-left">
+            <img src="assets/images/logo.webp" alt="Bavington Bees logo" width="200" height="100">
+        </div>
+
+        <div class="header-center">
+            <img src="assets/images/strapline.webp" alt="Award Winning Honey" width="250">
+        </div>
+
+        <div class="header-right">
+            <a href="https://www.instagram.com/bavington.bees/" target="_blank" aria-label="Visit Bavington Bees on Instagram">
+                <img src="assets/images/instagram-icon.svg" alt="Instagram icon" width="50" height="50">
+            </a>
+        </div>
+    </section>
+
+    <nav>
+        <a href="index.html" aria-current="page">Home</a>
+    </nav>
+
+    <section class="hero-container">
+        <section class="hero-image">
+            <img src="assets/images/hero.webp"
+                 alt="Bavington Bees Honey Bees"
+                 loading="eager"
+                 fetchpriority="high"
+            >
+        </section>
+    </section>
+
+</header>
+
+<main>
+    <div class="container-contact">
+        <section id="contact" class="item-contact">
+            <h2>Contact</h2>
+            <form 
+              action="https://submit-form.com/I8k6ubkcd" method="POST" 
+            >
+                <label for="name" class="required">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
+
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
+
+                <label for="phone" class="required">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telephone number" required aria-required="true">
+
+                <label for="callback" class="required">Contact preference</label>
+                <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required aria-required="true">
+
+                <label for="message"class="required">Message</label>
+                <textarea id="message" name="message" placeholder="How can I help you?" required aria-required="true"></textarea>
+                
+                <p class="red-asterisk">Required</p>
+
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW" data-callback="javascriptCallback" aria-label="Captcha Verification"></div>                
+                <button type="submit">Contact Max</button>
+            </form>
+          </section>
+    </div>
+
+
+    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+  </main>
+
+    <footer>
+      <div id="footer-placeholder">
+        <div class="item-footer">
+          <p><strong>Award Winning Honey</strong></p>
+          <p>&copy; 2024 Bavington Bees</p>
+        </div>
+      </div>
+    </footer>
+
+    <script data-goatcounter="https://bavingtonbees.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js">
+    </script>
+
+    <script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer>
+    </script>
+</body>
+</html>
