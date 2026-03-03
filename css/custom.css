@@ -1,0 +1,26 @@
+
+/*Oakwood ltd Framework v3.0 custom.css */
+
+/* site specific bbees*/
+
+/* Overides */
+
+:root {
+    --title-align: center;
+    --heading-align: center;
+}
+
+.header-center img {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+
+@media (max-width: 768px) {
+
+    .header-right {
+        display: none;        /* Hide Instagram icon */
+    }
+}
+
