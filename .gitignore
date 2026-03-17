@@ -1,5 +1,7 @@
 # Local scripts
 *.sh
+*.org
+*.txt
 *generate-sitemap.py
 
 # Python cache
