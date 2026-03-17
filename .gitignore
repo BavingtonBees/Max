@@ -1,0 +1,15 @@
+# Local scripts
+*.sh
+*generate-sitemap.py
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
