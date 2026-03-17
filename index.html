@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <!--bbees using css v3.0 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <meta name="description" content="Award-winning honey by Bavington Bees.">
     <title>Bavington Bees</title>
-    <meta name="description" content="Award-winning honey by Bavington Bees. Contact us for honey and bee-related products.">
+    <link rel="stylesheet" href="css/1-settings.css">
+    <link rel="stylesheet" href="css/2-base.css">
+    <link rel="stylesheet" href="css/3-components.css">
+    <link rel="stylesheet" href="css/4-utilities.css">
+    <link rel="stylesheet" href="css/5-custom.css">
+
 </head>
 
 
@@ -32,7 +34,7 @@
 
     <nav>
         <a href="#home" aria-current="page">Home</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="bbees-contact.html">Contact Us</a>
     </nav>
 
     <section class="hero-container">
@@ -45,13 +47,13 @@
         </section>
     </section>
 
-    <section class="intro-container" id="top">
+    <section class="intro-container">
         <section class="intro-item">
 
             <h3>Bavington Bees has five beehives in Brockham in the heart of the Surrey Hills.</h3>
             <p class="larger-text">Our honeybees produce delicious natural light honey which has won several awards.</p>
             <p>We harvest the honey in the autumn and sell through <a href="https://theshopatstroodgreen.co.uk/" target="_blank">The Shop at Strood Green</a> in Brockham and directly to consumers.</p>
-            <p>Want to know more? Get in <a href="#contact">touch</a>, browse our <a href="https://shop.bavingtonbees.com/" target="_blank">online shop</a>, or follow us on <a href="https://www.instagram.com/bavington.bees/" target="_blank">Instagram</a> .</p>
+            <p>Want to know more? Get in <a href="bbees-contact.html">touch</a>, browse our <a href="https://shop.bavingtonbees.com/" target="_blank">online shop</a>, or follow us on <a href="https://www.instagram.com/bavington.bees/" target="_blank">Instagram</a> .</p>
         </section>
     </section>
 
@@ -72,37 +74,19 @@
 
     <section class="cta-container">
         <article  class="cta-item">
-            <p>You can contact Max using our <a href="contact.html">contact form</a>.</p>
+            <p>You can contact Max using our <a href="bbees-contact.html">contact form</a>.</p>
         </article>
     </section>
-
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
 </main>
 
-<footer>
-  <div id="footer-placeholder">
-    <div class="item-footer">
-      <p><strong>Award Winning Honey</strong></p>
-      <p>&copy; 2024 Bavington Bees Ref: ns</p>
-    </div>
-  </div>
-</footer>
+    <!-- FAB back to top -->
+    <a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
 
-<script>
-  fetch('bbees-footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-    })
-    .catch(error => console.error('Error loading footer:', error));
-</script>
+    <!-- Footer (web component) -->
+    <site-footer></site-footer>
 
-<script data-goatcounter="https://bavingtonbees.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js">
-</script>
+    <!-- Scripts -->
+    <script src="js/bbees-main.js"></script>
 
-<script 
-    src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer>
-</script>
 </body>
 </html>

@@ -1,0 +1,93 @@
+/*  1-settings.css
+    Oakwood Framework v4.1.0
+    Design tokens — colours, fonts, spacing scale. Only file that differs per client.
+*/
+:root {
+
+    --site-max-width: 900px;
+
+    /* Responsive spacing */
+    --space-1: clamp(4px, 0.4vw, 6px); /* tiny */
+    --space-2: clamp(8px, 0.6vw, 12px); /* icon */
+    --space-3: clamp(12px, 1vw, 16px); /* paragraph */
+    --space-4: clamp(16px, 1.6vw, 24px); /* card content item padding */
+    --space-5: clamp(24px, 2.5vw, 40px);  /* block */
+    --space-6: clamp(40px, 4vw, 64px); /* section */
+
+    /* Semanmtic spacing */
+    --spacing-xs:var(--space-1);
+    --spacing-sm: var(--space-2);
+    --spacing-md: var(--space-3);
+    --spacing-lg: var(--space-4);
+    --spacing-inline: var(--space-3);
+    --spacing-content: var(--space-4);
+    --spacing-block: var(--space-5);
+    --spacing-section: var(--space-6);
+
+
+    --border-radius: 6px;           /* Border radius */
+    --border-color: #ccc;           /* Border colour for cards, blockquotes, tables */
+
+    --fab-size: 64px;
+    --fab-size-sm: 52px;
+    --fab-size-lg: 72px;
+    --fab-radius: 50%;              /* circular — default */
+    --fab-size-wide: calc(var(--fab-size) * 2.5);
+
+    --fab-bg: var(--bg-button);
+    --fab-color: var(--text-button);
+    --fab-bg-hover: var(--bg-button-hover);
+    --fab-color-hover: var(--text-button-hover);
+
+    --fab-shadow: var(--shadow-medium);
+    --fab-offset: var(--spacing-block);
+
+
+
+    --font-base: Montserrat, sans-serif;
+    --font-brand: Montserrat, sans-serif;
+
+    --font-fluid-small:  clamp(0.875rem, 0.8vw + 0.75rem, 1rem);     /* captions, labels */
+    --font-fluid-body:   clamp(1rem, 1vw + 0.75rem, 1.125rem);        /* paragraphs */
+    --font-fluid-medium: clamp(1.125rem, 1.5vw + 0.9rem, 1.4rem);     /* intro, subheadings */
+    --font-fluid-large:  clamp(1.6rem, 2vw + 1.2rem, 2.2rem);         /* CTA, page titles */
+
+    --shadow-light: 0 0 10px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 12px rgba(0,0,0,0.15);
+
+    --title-align: center;
+    --heading-align: left;
+    --th-td-text-align: left;
+
+    --brand-primary: #FFD760;   /* Design tokens */
+    --brand-accent: black;
+
+    --text-dark: black;
+    --text-medium: lightslategrey;
+    --text-light: white;
+
+
+    --bg-outer: ivory;
+    --bg-inner: white;
+    --bg-blockquote-table: honeydew;
+
+    --bg-nav-footer: #FFD760;
+    --text-nav: black;
+    --text-nav-hover: grey;
+    --text-footer: back;
+
+    --bg-button: #FFD760;
+    --bg-button-hover: #FFD760;
+    --text-button: black;
+    --text-button-hover: grey;
+    --button-radius: 25px;
+
+    --link-color: blue;
+    --link-hover-color: navy;
+
+    --bg-card-normal: #d8f2ee;
+    --bg-card-highlight: #cde8e4;
+
+}
+
+/* Fonts Remove any not required by site */
