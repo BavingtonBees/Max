@@ -19,3 +19,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
+function javascriptCallback(token) {
+    // handle token if needed
+}
