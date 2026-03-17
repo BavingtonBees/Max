@@ -20,5 +20,7 @@ window.addEventListener('scroll', () => {
 });
 
 function javascriptCallback(token) {
-    // handle token if needed
+    // Optional: do something with the token
+    console.log("Turnstile token:", token);
 }
+
