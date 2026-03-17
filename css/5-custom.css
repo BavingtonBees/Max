@@ -4,5 +4,9 @@
     eg: .mt-4 .hidden .text-center .sr-only
 */
 
-
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
