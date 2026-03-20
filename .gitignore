@@ -2,6 +2,8 @@
 *.sh
 *.org
 *.txt
+!.well-known/security.txt
+
 *generate-sitemap.py
 
 # Python cache
