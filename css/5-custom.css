@@ -10,9 +10,14 @@
     }
 }
 
-#submit-btn[disabled] {
-    opacity: 0.5;
+.submit-btn {
+    opacity: 0.4;
     cursor: not-allowed;
+    transition: opacity 0.4s ease, transform 0.3s ease;
 }
 
-
+.submit-btn.enabled {
+    opacity: 1;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
