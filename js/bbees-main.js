@@ -23,7 +23,9 @@ window.addEventListener('scroll', () => {
 window.turnstileReady = function (token) {
     const btn = document.getElementById("submit-btn");
     if (btn) {
-        btn.style.display = "block";
+        btn.disabled = false;
+        btn.style.opacity = "1";
+        btn.style.cursor = "pointer";
     }
 };
 
