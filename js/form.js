@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Turnstile token
     const token = turnstile.getResponse();
+
+    if (!token) {
+      messageBox.textContent = "Please complete the verification.";
+      return;
+    }
+
     formData.append("cf-turnstile-response", token);
 
     try {
@@ -24,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const result = await response.json();
+      console.log("Formspark result:", result);
 
       if (result.success) {
         messageBox.textContent = "Thank you — your message has been sent.";
         form.reset();
         turnstile.reset();
 
-        // 🔥 GoatCounter success event
         if (window.goatcounter) {
           window.goatcounter.count({
             path: "/contact/success",
@@ -42,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         messageBox.textContent = "Verification failed. Please try again.";
         turnstile.reset();
 
-        // 🔥 GoatCounter failure event
         if (window.goatcounter) {
           window.goatcounter.count({
             path: "/contact/verification-failed",
@@ -54,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
       messageBox.textContent = "Network error — please try again.";
 
-      // 🔥 GoatCounter network error event
       if (window.goatcounter) {
         window.goatcounter.count({
           path: "/contact/network-error",
