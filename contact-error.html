@@ -1,67 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thank You</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="There was an issue sending your message. Please try again.">
+    <title>Message Not Sent — Bavington Bees</title>
 
-  <!-- Minimal, CSP‑safe styling -->
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-                   sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #fafafa;
-      color: #222;
-      line-height: 1.6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 600px;
-      text-align: center;
-      padding: 2rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: 1.8rem;
-    }
-
-    p {
-      margin-bottom: 1.5rem;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background: #333;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-    }
-
-    a.button:hover {
-      background: #000;
-    }
-  </style>
+    <link rel="stylesheet" href="css/1-settings.css">
+    <link rel="stylesheet" href="css/2-base.css">
+    <link rel="stylesheet" href="css/3-components.css">
+    <link rel="stylesheet" href="css/4-utilities.css">
+    <link rel="stylesheet" href="css/5-custom.css">
 </head>
 
 <body>
-  <div class="container">
-    <h1>Unknown Error!</h1>
-    <p>Your message has not been sent. Apologies please try again later</p>
-    <a href="/" class="button">Return to Home</a>
-  </div>
-</body>
-</html>
+
+<header>
+    <section class="site-header">
+        <div class="header-left">
+            <img src="assets/images/logo.webp" alt="Bavington Bees logo" width="200" height="100">
+        </div>
+
+        <div class="header-center">
+            <img src="assets/images/strapline.webp" alt="Award Winning Honey" width="250">
+        </div>
+
+        <div class="header-right">
+            <a href="https://www.instagram.com/bavington.bees/" target="_blank" aria-label="Visit Bavington Bees on Instagram">
+                <img src="assets/images/instagram-icon.svg" alt="Instagram icon" width="50" height="50">
+            </a>
+        </div>
+    </section>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <div class="container-contact">
+        <section class="item-contact text-center">
+            <h1 class="u-mb-l">Something Went Wrong</h1>
+
+            <p class="u-mb-m">
+                Your message couldn’t be sent this time.
+                Please try again — or contact us directly if the issue continues.
+            </p>
+
+            <a href="index.html" class="button button--primary u-mt-m">
+                Try Again
+            </a>
+        </section>
+    </div>
+</main>
+
+<!-- FAB back to top -->
+<a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+<site-footer></site-footer>
 
