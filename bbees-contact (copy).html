@@ -17,7 +17,7 @@
 
 <body>
 <header>
-    <div class="site-header">
+    <section class="site-header">
         <div class="header-left">
             <img src="assets/images/logo.webp" alt="Bavington Bees logo" width="200" height="100">
         </div>
@@ -27,20 +27,24 @@
         </div>
 
         <div class="header-right">
-            <a href="https://www.instagram.com/bavington.bees/" target="_blank" rel="noopener" aria-label="Visit Bavington Bees on Instagram">
-                <img src="assets/images/instagram-icon.svg" alt="" width="50" height="50">
+            <a href="https://www.instagram.com/bavington.bees/" target="_blank" aria-label="Visit Bavington Bees on Instagram">
+                <img src="assets/images/instagram-icon.svg" alt="Instagram icon" width="50" height="50">
             </a>
         </div>
-    </div>
+    </section>
 
     <nav>
         <a href="index.html">Home</a>
     </nav>
 
     <section class="hero-container">
-        <div class="hero-image">
-            <img src="assets/images/hero.webp" alt="Bavington Bees Honey Bees" width="1600" height="900" fetchpriority="high">
-        </div>
+        <section class="hero-image">
+            <img src="assets/images/hero.webp"
+                 alt="Bavington Bees Honey Bees"
+                 loading="eager"
+                 fetchpriority="high"
+            >
+        </section>
     </section>
 
 </header>
@@ -54,19 +58,19 @@
                 method="POST"
             >
                 <label for="name" class="required">Name</label>
-                <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
+                <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
 
                 <label for="email" class="required">Email</label>
-                <input type="email" id="email" name="_replyto" placeholder="Email" autocomplete="email" required>
+                <input type="email" id="email" name="_replyto" placeholder="Email" required aria-required="true">
 
                 <label for="phone" class="required">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="Telephone number" autocomplete="tel" required>
+                <input type="tel" id="phone" name="phone" placeholder="Telephone number" required aria-required="true">
 
                 <label for="callback" class="required">Contact preference</label>
-                <input type="text" id="callback" name="callback" placeholder="Phone, Email, Text Msg..." required>
+                <input type="text" id="callback" name="callback" placeholder="Phone, Email, Text Msg..." required aria-required="true">
 
                 <label for="message" class="required">Message</label>
-                <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
+                <textarea id="message" name="message" placeholder="How can I help you?" required aria-required="true"></textarea>
 
                 <!-- Redirect after successful submission -->
                 <input type="hidden" name="_redirect" value="https://bavingtonbees.com/contact-success.html">
@@ -89,6 +93,7 @@
             </form>
 
 
+            <script src="/js/form.js"></script>
 
 
           </section>
