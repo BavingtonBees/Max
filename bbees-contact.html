@@ -74,13 +74,21 @@
 
                 <!-- Redirect after successful submission -->
                 <input type="hidden" name="_redirect" value="https://bavingtonbees.com/contact-success.html">
+                <input type="hidden" name="_error" value="https://bavingtonbees.com/contact-error.html">
+                <input type="hidden" name="_no-capture" value="true">
+
+
 
                 <p class="red-asterisk">Required</p>
 
                 <!-- Turnstile (auto‑injects cf-turnstile-response) -->
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW"></div>
+                <div class="cf-turnstile"
+                     data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW"
+                     data-callback="turnstileReady">
+                </div>
 
-                <button type="submit">Contact Max</button>
+                <button type="submit" id="submit-btn" style="display:none;">Contact Max</button>
+
             </form>
 
 

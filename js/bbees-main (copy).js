@@ -19,13 +19,4 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Turnstile callback (Cloudflare calls this automatically)
-window.turnstileReady = function (token) {
-    const btn = document.getElementById("submit-btn");
-    if (btn) {
-        btn.style.display = "block";
-    }
-};
-
-
 
