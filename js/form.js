@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const endpoint = form.getAttribute("action");
     const formData = new FormData(form);
 
-    // Include Turnstile token
+    // Turnstile token
     const token = turnstile.getResponse();
     formData.append("cf-turnstile-response", token);
 
@@ -29,13 +29,38 @@ document.addEventListener("DOMContentLoaded", () => {
         messageBox.textContent = "Thank you — your message has been sent.";
         form.reset();
         turnstile.reset();
+
+        // 🔥 GoatCounter success event
+        if (window.goatcounter) {
+          window.goatcounter.count({
+            path: "/contact/success",
+            title: "Contact Form Success"
+          });
+        }
+
       } else {
         messageBox.textContent = "Verification failed. Please try again.";
         turnstile.reset();
+
+        // 🔥 GoatCounter failure event
+        if (window.goatcounter) {
+          window.goatcounter.count({
+            path: "/contact/verification-failed",
+            title: "Contact Form Verification Failed"
+          });
+        }
       }
 
     } catch (error) {
       messageBox.textContent = "Network error — please try again.";
+
+      // 🔥 GoatCounter network error event
+      if (window.goatcounter) {
+        window.goatcounter.count({
+          path: "/contact/network-error",
+          title: "Contact Form Network Error"
+        });
+      }
     }
   });
 });
