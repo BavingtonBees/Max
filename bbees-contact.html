@@ -54,8 +54,8 @@
         <section id="contact" class="item-contact">
             <h2>Contact</h2>
             <form 
-                data-formspark
-                action="https://submit-form.com/I8k6ubkcd" method="POST"
+                action="https://submit-form.com/I8k6ubkcd"
+                method="POST"
             >
                 <label for="name" class="required">Name</label>
                 <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
@@ -69,17 +69,20 @@
                 <label for="callback" class="required">Contact preference</label>
                 <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required aria-required="true">
 
-                <label for="message"class="required">Message</label>
-                <textarea id="message" name="message" placeholder="How can I help you?(check-7)" required aria-required="true"></textarea>
+                <label for="message" class="required">Message</label>
+                <textarea id="message" name="message" placeholder="How can I help you? Check 10" required aria-required="true"></textarea>
+
+                <!-- Redirect after successful submission -->
+                <input type="hidden" name="_redirect" value="https://bavingtonbees.com/contact-success.html">
 
                 <p class="red-asterisk">Required</p>
 
+                <!-- Turnstile (auto‑injects cf-turnstile-response) -->
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW"></div>
+
                 <button type="submit">Contact Max</button>
-
-                <p id="form-message" aria-live="polite"></p>
-
             </form>
+
 
             <script src="/js/form.js"></script>
 
