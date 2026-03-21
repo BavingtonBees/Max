@@ -54,7 +54,8 @@
         <section id="contact" class="item-contact">
             <h2>Contact</h2>
             <form 
-              action="https://submit-form.com/I8k6ubkcd" method="POST" 
+                data-formsdpark
+                action="https://submit-form.com/I8k6ubkcd" method="POST"
             >
                 <label for="name" class="required">Name</label>
                 <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
@@ -79,6 +80,11 @@
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW"</div>
                 <button type="submit">Contact Max</button>
             </form>
+
+            <p id="form-message" aria-live="polite"></p>
+
+            <script src="/assets/form.js"></script>
+
           </section>
     </div>
   </main>
