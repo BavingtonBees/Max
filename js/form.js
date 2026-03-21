@@ -26,7 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(endpoint, {
         method: "POST",
         body: formData,
-        headers: { "Accept": "application/json" }
+        headers: {
+          "Accept": "application/json",
+          "User-Agent": navigator.userAgent
+        }
+
       });
 
       const result = await response.json();
