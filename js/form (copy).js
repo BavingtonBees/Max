@@ -23,17 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("cf-turnstile-response", token);
 
     try {
-        const data = Object.fromEntries(formData);
+      const response = await fetch(endpoint, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json",
+          "User-Agent": navigator.userAgent
+        }
 
-        const response = await fetch(endpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(data)
-        });
-
+      });
 
       const result = await response.json();
       console.log("Formspark result:", result);
