@@ -21,7 +21,9 @@ window.addEventListener('scroll', () => {
 
 // Turnstile callback (Cloudflare calls this automatically)
 window.turnstileReady = function (token) {
-    const btn = document.getElementById("submit-btn");
+    const widget = document.querySelector(".cf-turnstile");
+    const form = widget.closest("form");
+    const btn = form.querySelector(".submit-btn");
 
     if (btn) {
         btn.disabled = false;
