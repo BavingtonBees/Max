@@ -28,6 +28,11 @@
     --border-radius: 6px;           /* Border radius */
     --border-color: #ccc;           /* Border colour for cards, blockquotes, tables */
 
+    /* Form field sizes */
+    --form-width-sm: 200px;
+    --form-width-md: 300px;
+    --form-width-lg: 600px;
+
     --fab-size: 64px;
     --fab-size-sm: 52px;
     --fab-size-lg: 72px;
@@ -74,7 +79,7 @@
     --bg-nav-footer: #FFD760;
     --text-nav: black;
     --text-nav-hover: grey;
-    --text-footer: back;
+    --text-footer: black;
 
     --bg-button: #FFD760;
     --bg-button-hover: #FFD760;

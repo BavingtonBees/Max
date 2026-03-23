@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" id="top">
-<!--bbees using css v4.0 -->
+<!--bbees using css v4.1 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,90 +11,83 @@
     <link rel="stylesheet" href="css/3-components.css">
     <link rel="stylesheet" href="css/4-utilities.css">
     <link rel="stylesheet" href="css/5-custom.css">
-
 </head>
-
-
 <body>
-<header>
-    <div class="site-header">
+
+    <!-- Top bar (if needed) -->
+
+    <!-- Header -->
+    <header class="site-header u-mb-sm">
         <div class="header-left">
             <img src="assets/images/logo.webp" alt="Bavington Bees logo" width="200" height="100">
         </div>
-
         <div class="header-center">
             <img src="assets/images/strapline.webp" alt="Award Winning Honey" width="250">
         </div>
-
         <div class="header-right">
             <a href="https://www.instagram.com/bavington.bees/" target="_blank" rel="noopener" aria-label="Visit Bavington Bees on Instagram">
                 <img src="assets/images/instagram-icon.svg" alt="" width="50" height="50">
             </a>
         </div>
-    </div>
+    </header>
 
+    <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
+        <a href="bbees-contact.html" aria-current="page">Contact</a>
     </nav>
 
-    <section class="hero-container">
+    <!-- Hero image -->
+    <div class="hero-container">
         <div class="hero-image">
-            <img src="assets/images/hero.webp" alt="Bavington Bees Honey Bees" width="1600" height="900" fetchpriority="high">
+            <img src="assets/images/hero.webp"
+                 alt="Bavington Bees Honey Bees"
+                 loading="eager"
+                 fetchpriority="high">
         </div>
-    </section>
-
-</header>
-
-<main>
-    <div class="container-contact">
-        <section id="contact" class="item-contact">
-            <h2>Contact</h2>
-            <form 
-                action="https://submit-form.com/I8k6ubkcd"
-                method="POST"
-            >
-                <label for="name" class="required">Name</label>
-                <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
-
-                <label for="email" class="required">Email</label>
-                <input type="email" id="email" name="_replyto" placeholder="Email" autocomplete="email" required>
-
-                <label for="phone" class="required">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="Telephone number" autocomplete="tel" required>
-
-                <label for="callback" class="required">Contact preference</label>
-                <input type="text" id="callback" name="callback" placeholder="Phone, Email, Text Msg..." required>
-
-                <label for="message" class="required">Message</label>
-                <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
-
-                <!-- Redirect after successful submission -->
-                <input type="hidden" name="_redirect" value="https://bavingtonbees.com/contact-success.html">
-                <input type="hidden" name="_error" value="https://bavingtonbees.com/contact-error.html">
-                <input type="hidden" name="_no-capture" value="true">
-
-                <p class="red-asterisk">Required</p>
-
-                <!-- Turnstile (auto‑injects cf-turnstile-response) -->
-                <div class="cf-turnstile"
-                     data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW"
-                     data-callback="turnstileReady"
-                     data-mode="managed">
-                </div>
-
-
-                <button type="submit" id="submit-btn" disabled>Contact Max</button>
-
-
-            </form>
-
-
-
-
-          </section>
     </div>
-  </main>
 
+    <!-- Contact form -->
+    <main>
+        <div class="container-contact u-mt-lg u-mb-section">
+            <div id="contact" class="item-contact">
+                <h2>Contact</h2>
+                <form action="https://submit-form.com/I8k6ubkcd" method="POST">
+
+                    <label for="name" class="form-label form-label--required u-mt-lg u-mb-xs">Name</label>
+                    <input class="form-control" type="text" id="name" name="name" placeholder="Name" autocomplete="name" required aria-required="true">
+
+                    <label for="email" class="form-label form-label--required u-mt-lg u-mb-xs">Email</label>
+                    <input class="form-control form-control--lg" type="email" id="email" name="_replyto" placeholder="Email" autocomplete="email" required aria-required="true">
+
+                    <label for="phone" class="form-label form-label--required u-mt-lg u-mb-xs">Phone</label>
+                    <input class="form-control form-control--sm" type="tel" id="phone" name="phone" placeholder="Telephone number" autocomplete="tel" required aria-required="true">
+
+                    <label for="callback" class="form-label form-label--required u-mt-lg u-mb-xs">Contact preference</label>
+                    <input class="form-control form-control--md" type="text" id="callback" name="callback" placeholder="Phone, Email, Text Msg..." required aria-required="true">
+
+                    <label for="message" class="form-label form-label--required u-mt-lg u-mb-xs">Message</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="How can I help you?" required aria-required="true"></textarea>
+
+                    <!-- Redirect after successful submission -->
+                    <input type="hidden" name="_redirect" value="https://bavingtonbees.com/contact-success.html">
+                    <input type="hidden" name="_error" value="https://bavingtonbees.com/contact-error.html">
+                    <input type="hidden" name="_no-capture" value="true">
+
+                    <p class="red-asterisk">Required</p>
+
+                    <div class="cf-turnstile u-mt-lg"
+                         data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW"
+                         data-callback="turnstileReady"
+                         data-mode="managed">
+                    </div>
+
+                    <button type="submit" id="submit-btn" disabled>Contact Max</button>
+
+                </form>
+            </div>
+        </div>
+    </main>
 
     <!-- FAB back to top -->
     <a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
@@ -105,9 +98,6 @@
     <!-- Scripts -->
     <script src="js/bbees-main.js"></script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
-    <script data-goatcounter="https://bavingtonbees.goatcounter.com/count"
-        async src="https://gc.zgo.at/count.js"></script>
-
 
 </body>
 </html>
