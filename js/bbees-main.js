@@ -8,16 +8,21 @@ class SiteFooter extends HTMLElement {
         `;
     }
 }
-
 customElements.define('site-footer', SiteFooter);
 
 const fabs = document.querySelectorAll('.fab');
-
 window.addEventListener('scroll', () => {
     fabs.forEach(fab => {
         fab.classList.toggle('fab--visible', window.scrollY > 300);
     });
 });
+
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function() {
+        setTimeout(() => document.getElementById('submit-btn').disabled = true, 100);
+    });
+}
 
 // GoatCounter analytics
 const gc = document.createElement('script')
@@ -25,5 +30,3 @@ gc.dataset.goatcounter = 'https://bavingtonbees.goatcounter.com/count'
 gc.src = '//gc.zgo.at/count.js'
 gc.async = true
 document.head.appendChild(gc)
-
-
