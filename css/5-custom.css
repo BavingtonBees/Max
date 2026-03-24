@@ -10,11 +10,4 @@
     }
 }
 
-.button--submit {
-    display: inline-flex;
-    opacity: 1;
-    cursor: pointer;
-    transform: translateY(-2px);
-    transition: opacity 0.4s ease, transform 0.3s ease;
-}
 

@@ -41,7 +41,7 @@ h6 { font-size: 0.67em; } /* default */
 p {
     font-size: var(--font-fluid-body);
     line-height: 1.6; /* multiplier of font size */
-    margin: 0 auto  var(--spacing-sm); /* top lr bottom */
+    margin: 0 auto  var(--spacing-small); /* top lr bottom */
 }
 
 p.medium-text {
@@ -75,12 +75,12 @@ a:focus-visible {
 /* Vertical list — extra space between items, no underlines on links */
 ul.spaced-list {
      /* list-style: none;    remove bullets if you want */
-     padding: var(--spacing-lg);
-     margin: var(--spacing-lg);
+     padding: var(--spacing-large);
+     margin: var(--spacing-large);
 }
 ul.spaced-list li {
     font-size: var(--font-fluid-medium);
-    margin: 0 0 var(--spacing-lg) 0;     /* bottom spacing between items */
+    margin: 0 0 var(--spacing-large) 0;     /* bottom spacing between items */
 }
 ul.spaced-list a {
     text-decoration: none;  /* remove underline */

@@ -15,10 +15,10 @@
     --space-6: clamp(40px, 4vw, 64px); /* section */
 
     /* Semanmtic spacing */
-    --spacing-xs:var(--space-1);
-    --spacing-sm: var(--space-2);
-    --spacing-md: var(--space-3);
-    --spacing-lg: var(--space-4);
+    --spacing-xsmall:var(--space-1);
+    --spacing-small: var(--space-2);
+    --spacing-medium: var(--space-3);
+    --spacing-large: var(--space-4);
     --spacing-inline: var(--space-3);
     --spacing-content: var(--space-4);
     --spacing-block: var(--space-5);
@@ -29,13 +29,13 @@
     --border-color: #ccc;           /* Border colour for cards, blockquotes, tables */
 
     /* Form field sizes */
-    --form-width-sm: 200px;
-    --form-width-md: 300px;
-    --form-width-lg: 600px;
+    --form-width-small: 200px;
+    --form-width-medium: 300px;
+    --form-width-large: 600px;
 
     --fab-size: 64px;
-    --fab-size-sm: 52px;
-    --fab-size-lg: 72px;
+    --fab-size-small: 52px;
+    --fab-size-large: 72px;
     --fab-radius: 50%;              /* circular — default */
     --fab-size-wide: calc(var(--fab-size) * 2.5);
 

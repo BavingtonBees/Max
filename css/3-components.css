@@ -5,7 +5,7 @@
 
 
 .top-bar {
-    padding: var(--spacing-sm) 0 0;  /* Small top padding */
+    padding: var(--spacing-small) 0 0;  /* Small top padding */
     display: flex;
     justify-content: space-between; /* Horizontal spacing */
     align-items: center;            /* Center items vertically */
@@ -36,7 +36,7 @@
     max-width: var(--site-max-width);
     width: 100%;
     margin: 0 auto;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-small);
     padding: 0 var(--spacing-inline);
 }
 
@@ -74,14 +74,14 @@ nav {
     flex-wrap: wrap;               /* allow items to wrap to new lines */
     background-color: var(--bg-nav-footer);
     justify-content: center;
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-small) 0;
     max-width: var(--site-max-width);
     margin: 0 auto;
 }
 
 nav a {
     color: var(--text-nav);
-    padding: 0 var(--spacing-md);
+    padding: 0 var(--spacing-medium);
     text-decoration: none;
     font-weight: bold;
     white-space: nowrap;
@@ -143,7 +143,7 @@ nav a:hover {
 
 .intro-item p {
     max-width: 85%;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-small);
     text-align: justify;
     text-justify: inter-word;
     font-size: var(--font-fluid-body);
@@ -157,13 +157,13 @@ nav a:hover {
     display: block;
     margin: 0 auto;
     max-width: 95%;
-    padding-top: var(--spacing-sm);
+    padding-top: var(--spacing-small);
     height: auto;
 }
 
 .intro-item blockquote {
     background: var(--bg-blockquote-table);
-    padding-top: var(--spacing-sm);
+    padding-top: var(--spacing-small);
 }
 
 /* End intro */
@@ -201,7 +201,7 @@ nav a:hover {
     display: block;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-small);
 }
 
 /* example html <article class="card card--highlight card--clickable"> */
@@ -236,11 +236,11 @@ nav a:hover {
 }
 
 .card h3 {
-    margin: 0 0 var(--spacing-sm) 0;
+    margin: 0 0 var(--spacing-small) 0;
 }
 
 .card p {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-small);
 }
 
 /* End Card container */
@@ -331,7 +331,7 @@ nav a:hover {
 }
 
 .content-item.side-by-side figcaption {
-    margin-top: var(--spacing-sm);
+    margin-top: var(--spacing-small);
     margin-bottom: var(--spacing-block);
     text-align: center;
     align-self: end;
@@ -339,14 +339,14 @@ nav a:hover {
 
 .content-item ul {
     max-width: 65ch;
-    margin: var(--spacing-sm) auto;
+    margin: var(--spacing-small) auto;
     font-size: var(--font-fluid-body);
     line-height: 1.6;
 }
 
 .content-item li {
-    margin-left: var(--spacing-md);
-    margin-bottom: var(--spacing-xs);
+    margin-left: var(--spacing-medium);
+    margin-bottom: var(--spacing-xsmall);
 }
 
 .content-item blockquote {
@@ -354,8 +354,8 @@ nav a:hover {
     max-width: 600px;
     background: var(--bg-blockquote-table);
     border-left: 4px solid var(--border-color);
-    padding: var(--spacing-xs) var(--spacing-md);
-    margin: var(--spacing-sm) auto;
+    padding: var(--spacing-xsmall) var(--spacing-medium);
+    margin: var(--spacing-small) auto;
     font-size: var(--font-fluid-body);
     font-style: italic;
 }
@@ -367,7 +367,7 @@ nav a:hover {
 .content-item table {
     width: 95%;
     max-width: 600px;
-    margin: var(--spacing-sm) auto;
+    margin: var(--spacing-small) auto;
     border-left: 4px solid var(--border-color);
     background-color: var(--bg-blockquote-table);
     border-collapse: collapse;
@@ -377,7 +377,7 @@ nav a:hover {
 .content-item table th,
 .content-item table td {
     border: 1px solid var(--text-dark);
-    padding: var(--spacing-xs) var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-medium);
     text-align: var(--th-td-text-align);
 }
 
@@ -429,7 +429,7 @@ nav a:hover {
 /* Input / textarea base */
 .form-control {
     width: 100%;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-small);
     border: 1px solid var(--border-color);
     background-color: var(--bg-blockquote-table);
     font-family: inherit;
@@ -462,9 +462,9 @@ textarea.form-control {
 }
 
 /* Field sizes */
-.form-control--sm { max-width: var(--form-width-sm); }
-.form-control--md { max-width: var(--form-width-md); }
-.form-control--lg { max-width: var(--form-width-lg); }
+.form-control--small { max-width: var(--form-width-small); }
+.form-control--medium { max-width: var(--form-width-medium); }
+.form-control--large { max-width: var(--form-width-large); }
 
 /* End Single contact column */
 
@@ -482,7 +482,7 @@ textarea.form-control {
     font-weight: 500;
     line-height: 1;
 
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-small) var(--spacing-medium);
 
     color: var(--text-button);
     background-color: var(--bg-button);
@@ -507,12 +507,17 @@ textarea.form-control {
 /* Variants */
 .button--small {
     font-size: var(--font-fluid-small);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-xsmall) var(--spacing-small);
+}
+
+.button--medium {
+    font-size: var(--font-fluid-medium);
+    padding: var(--spacing-medium) var(--spacing-large);
 }
 
 .button--large {
     font-size: var(--font-fluid-large);
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-medium) var(--spacing-large);
 }
 
 .button--primary {
@@ -602,16 +607,16 @@ textarea.form-control {
 
 /* Size variants */
 
-.fab--sm {
-    width: var(--fab-size-sm);
-    height: var(--fab-size-sm);
-    font-size: calc(var(--fab-size-sm) * 0.75);
+.fab--small {
+    width: var(--fab-size-small);
+    height: var(--fab-size-small);
+    font-size: calc(var(--fab-size-small) * 0.75);
 }
 
-.fab--lg {
-    width: var(--fab-size-lg);
-    height: var(--fab-size-lg);
-    font-size: calc(var(--fab-size-lg) * 0.75);
+.fab--large {
+    width: var(--fab-size-large);
+    height: var(--fab-size-large);
+    font-size: calc(var(--fab-size-large) * 0.75);
 }
 
 /* Shape variants */
@@ -625,15 +630,15 @@ textarea.form-control {
 
 /* End of floating button */
 
-/* Footer */
+/* Footer custom element fort script */
 
 site-footer {
-    display: flex;
+    display: flex; /* was flex */
     flex-direction: column;
     background-color: var(--bg-nav-footer);
     align-items: center;
     gap: var(--spacing-content);
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-small) 0;
     max-width: var(--site-max-width);
     margin: 0 auto;
 }
@@ -664,7 +669,7 @@ site-footer .item-footer {
         display: grid;
         grid-template-columns: 1fr;
         text-align: center;
-        gap: var(--spacing-xs);
+        gap: var(--spacing-xsmall);
     }
     .header-left {
         grid-column: 1;
