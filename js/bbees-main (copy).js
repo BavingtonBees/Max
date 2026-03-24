@@ -19,6 +19,16 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Turnstile callback (Cloudflare calls this automatically)
+window.turnstileReady = function (token) {
+    const btn = document.getElementById("submit-btn");
+
+    if (btn) {
+        btn.disabled = false;
+        btn.classList.add("enabled");
+    }
+};
+
 // GoatCounter analytics
 const gc = document.createElement('script')
 gc.dataset.goatcounter = 'https://bavingtonbees.goatcounter.com/count'
