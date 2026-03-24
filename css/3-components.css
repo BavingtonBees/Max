@@ -520,17 +520,19 @@ textarea.form-control {
     color: var(--text-button);
 }
 
-/* Submit button — hidden until Turnstile succeeds */
 .button--submit {
-    display: none;
-}
-
-.button--submit.enabled {
     display: inline-flex;
     opacity: 1;
     cursor: pointer;
     transform: translateY(-2px);
     transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.button--submit:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: translateY(0);
+    pointer-events: none;
 }
 
 /* End button */
