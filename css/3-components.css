@@ -529,7 +529,7 @@ textarea.form-control {
 }
 
 .button--submit:disabled {
-    opacity: 0.45;
+    opacity: 0.25;
     cursor: not-allowed;
     transform: translateY(0);
     pointer-events: none;
