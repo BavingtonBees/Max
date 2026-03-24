@@ -521,11 +521,11 @@ textarea.form-control {
 }
 
 /* Submit button — hidden until Turnstile succeeds */
-.submit-btn {
+.button--submit {
     display: none;
 }
 
-.submit-btn.enabled {
+.button--submit.enabled {
     display: inline-flex;
     opacity: 1;
     cursor: pointer;
