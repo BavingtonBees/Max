@@ -17,12 +17,24 @@ window.addEventListener('scroll', () => {
     });
 });
 
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function() {
-        setTimeout(() => document.getElementById('submit-btn').disabled = true, 100);
-    });
-}
+const form = document.getElementById("contact-form");
+const status = document.getElementById("status");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  fetch("https://submit-form.com/I8k6ubkcd", {
+    method: "POST",
+    body: new FormData(form)
+  })
+  .then(() => {
+    status.textContent = "Message sent!";
+    form.reset();
+  })
+  .catch(() => {
+    status.textContent = "Something went wrong.";
+  });
+});
 
 // GoatCounter analytics
 const gc = document.createElement('script')
