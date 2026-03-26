@@ -51,14 +51,19 @@
     <main>
         <div class="container-contact u-mt-lg u-mb-section">
             <div id="contact" class="item-contact">
+<<<<<<< HEAD
                 <h2>Contact</h2>
                 <form id="contact-form">
+=======
+                <h2>Contact Tick</h2>
+                <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+>>>>>>> e119b49 (bbees Fist use web3forms)
 
                     <label for="name" class="form-label form-label--required u-mt-lg u-mb-xs">Name</label>
                     <input class="form-control" type="text" id="name" name="name" placeholder="Name" autocomplete="name" required aria-required="true">
 
                     <label for="email" class="form-label form-label--required u-mt-lg u-mb-xs">Email</label>
-                    <input class="form-control form-control--lg" type="email" id="email" name="_replyto" placeholder="Email" autocomplete="email" required aria-required="true">
+                    <input class="form-control form-control--lg" type="email" id="email" name="email" placeholder="Email" autocomplete="email" required aria-required="true">
 
                     <label for="phone" class="form-label form-label--required u-mt-lg u-mb-xs">Phone</label>
                     <input class="form-control form-control--sm" type="tel" id="phone" name="phone" placeholder="Telephone number" autocomplete="tel" required aria-required="true">
@@ -69,16 +74,16 @@
                     <label for="message" class="form-label form-label--required u-mt-lg u-mb-xs">Message</label>
                     <textarea class="form-control" id="message" name="message" placeholder="How can I help you?" required aria-required="true"></textarea>
 
-                    <!-- Redirect after successful submission -->
-                    <input type="hidden" name="_redirect" value="https://bavingtonbees.com/bbees-contact-success.html">
-                    <input type="hidden" name="_error" value="https://bavingtonbees.com/bbees-contact-error.html">
-                    <input type="hidden" name="_no-capture" value="true">
-
                     <p class="red-asterisk">Required</p>
+
+                    <input type="hidden" name="access_key" value="82bb6632-156d-44de-b097-4c270bfde5dex">
+
+                    <input type="hidden" name="redirect" value="https://bavingtonbees.com/bbees-contact-success.html">
+
+                    <input type="hidden" name="error_redirect" value="https://bavingtonbees.com/bbees-contact-error.html">
 
                     <div class="cf-turnstile u-mt-lg"
                          data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW"
-                         data-callback="javascriptCallback"
                          data-mode="managed">
                     </div>
 

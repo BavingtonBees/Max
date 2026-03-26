@@ -17,6 +17,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
+<<<<<<< HEAD
 const form = document.getElementById("contact-form");
 const status = document.getElementById("status");
 
@@ -35,6 +36,27 @@ form.addEventListener("submit", function (e) {
     status.textContent = "Something went wrong.";
   });
 });
+=======
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        const token = document.querySelector('[name="cf-turnstile-response"]');
+        if (!token || !token.value) {
+            e.preventDefault();
+            alert('Please complete the security check.');
+            return;
+        }
+        setTimeout(() => document.getElementById('submit-button').disabled = true, 100);
+    });
+}
+
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function() {
+        setTimeout(() => document.getElementById('submit-button').disabled = true, 100);
+    });
+}
+>>>>>>> e119b49 (bbees Fist use web3forms)
 
 // GoatCounter analytics
 const gc = document.createElement('script')
