@@ -74,6 +74,12 @@
 
                     <p class="red-asterisk">Required</p>
 
+                    <!-- Redirect after successful submission -->
+                    <input type="hidden" name="_redirect" value="https://bavingtonbees.com/bbees-contact-success.html">
+                    <input type="hidden" name="_error" value="https://bavingtonbees.com/bbees-contact-error.html">
+                    <input type="hidden" name="_no-capture" value="true">
+
+
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW" data-callback="javascriptCallback" aria-label="Captcha Verification"></div>
 
                      <button type="submit" id="submit-button" class="button button--submit button--medium u-mt-lg u-mb-lg" >Contact Max</button>
